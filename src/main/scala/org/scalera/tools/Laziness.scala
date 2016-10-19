@@ -1,8 +1,8 @@
 package org.scalera.tools
 
-trait Laziness {
+object Laziness {
 
-  private[Laziness] trait Lazy[T] { lzy =>
+  trait Lazy[T] { lzy =>
 
     protected lazy val evalF : () => T = ???
 
@@ -21,11 +21,10 @@ trait Laziness {
 
   }
 
-  object LazyExp {
+  object Lazy {
 
     def apply[T](f: => T): Lazy[T] =
       new Lazy[T]{ override protected lazy val evalF = () => f }
 
   }
-
 }

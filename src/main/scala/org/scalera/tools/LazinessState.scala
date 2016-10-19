@@ -2,7 +2,7 @@ package org.scalera.tools
 
 import scalaz.State
 
-trait LazinessState {
+object LazinessState {
 
   type LazyS[T] = (() => T, Option[T])
 

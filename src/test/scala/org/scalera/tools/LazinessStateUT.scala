@@ -1,6 +1,7 @@
 package org.scalera.tools
 
 import org.scalatest.{FlatSpec, Matchers}
+import LazinessState._
 
 
 class LazinessStateUT extends FlatSpec with Matchers {
