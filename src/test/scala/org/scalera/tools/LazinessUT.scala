@@ -1,6 +1,7 @@
 package org.scalera.tools
 
 import org.scalatest.{FlatSpec, Matchers}
+import Laziness._
 
 class LazinessUT extends FlatSpec with Matchers {
 
@@ -10,7 +11,7 @@ class LazinessUT extends FlatSpec with Matchers {
 
     var sideEffectDetector: Int = 0
 
-    val two = LazyExp {
+    val two = Lazy {
       sideEffectDetector += 1
       2
     }
@@ -23,7 +24,7 @@ class LazinessUT extends FlatSpec with Matchers {
 
     var sideEffectDetector: Int = 0
 
-    val two = LazyExp {
+    val two = Lazy {
       sideEffectDetector += 1
       2
     }
@@ -39,7 +40,7 @@ class LazinessUT extends FlatSpec with Matchers {
 
     var sideEffectDetector: Int = 0
 
-    val two = LazyExp {
+    val two = Lazy {
       sideEffectDetector += 1
       2
     }
